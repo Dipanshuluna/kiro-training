@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 1100" width="1500" height="1100">
+<defs>
+<filter id="sh"><feDropShadow dx="2" dy="3" stdDeviation="2" flood-opacity="0.25"/></filter>
+<marker id="aR" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#d32f2f"/></marker>
+<marker id="aG" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#2e7d32"/></marker>
+</defs>
+<rect width="1500" height="1100" fill="#f8f9fa"/>
+<rect width="1500" height="50" fill="#0d47a1"/>
+<text x="750" y="28" text-anchor="middle" font-family="Arial" font-size="18" font-weight="bold" fill="#fff">DETAILED COMPONENT CONNECTION DIAGRAM - PIN LEVEL WIRING</text>
+<text x="750" y="44" text-anchor="middle" font-family="Arial" font-size="10" fill="#90caf9">Every wire and pin connection mapped | Color coded by function</text>
+
+<!-- ======= ESP32 (CENTER) ======= -->
+<g filter="url(#sh)">
+<rect x="550" y="350" width="400" height="400" rx="15" fill="#0d47a1" stroke="#1a237e" stroke-width="2"/>
+<rect x="570" y="370" width="360" height="360" rx="10" fill="#1565c0"/>
+<text x="750" y="400" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold" fill="#fff">ESP32 DEVKIT V1</text>
+<text x="750" y="418" text-anchor="middle" font-family="Arial" font-size="9" fill="#bbdefb">Dual Core 240MHz | WiFi 2.4GHz | BLE</text>
+<!-- Left Pin Header -->
+<rect x="580" y="440" width="150" height="270" rx="5" fill="#0d47a1" opacity="0.5"/>
+<text x="655" y="458" text-anchor="middle" font-family="Arial" font-size="9" font-weight="bold" fill="#ffeb3b">LEFT PINS</text>
+<text x="600" y="480" font-family="Courier" font-size="9" fill="#fff">3V3  ●━━━━━━</text>
+<text x="600" y="500" font-family="Courier" font-size="9" fill="#fff">GND  ●━━━━━━</text>
+<text x="600" y="520" font-family="Courier" font-size="9" fill="#fff">GPIO15●━━━━━━</text>
+<text x="600" y="540" font-family="Courier" font-size="9" fill="#4caf50">GPIO34●━━━━━━ ← Opto Signal</text>
+<text x="600" y="560" font-family="Courier" font-size="9" fill="#2196f3">GPIO35●━━━━━━ ← MQ-2 AO</text>
+<text x="600" y="580" font-family="Courier" font-size="9" fill="#ffc107">GPIO32●━━━━━━ ← DHT11 DATA</text>
+<text x="600" y="600" font-family="Courier" font-size="9" fill="#ff5722">GPIO25●━━━━━━ → Buzzer+</text>
+<text x="600" y="620" font-family="Courier" font-size="9" fill="#f44336">GPIO26●━━━━━━ → LED Red</text>
+<text x="600" y="640" font-family="Courier" font-size="9" fill="#4caf50">GPIO27●━━━━━━ → LED Green</text>
+<text x="600" y="660" font-family="Courier" font-size="9" fill="#ffeb3b">GPIO14●━━━━━━ → LED Yellow</text>
+<!-- Right Pin Header -->
+<rect x="770" y="440" width="150" height="270" rx="5" fill="#0d47a1" opacity="0.5"/>
+<text x="845" y="458" text-anchor="middle" font-family="Arial" font-size="9" font-weight="bold" fill="#ffeb3b">RIGHT PINS</text>
+<text x="790" y="480" font-family="Courier" font-size="9" fill="#fff">VIN  ━━━━━━●</text>
+<text x="790" y="500" font-family="Courier" font-size="9" fill="#fff">GND  ━━━━━━●</text>
+<text x="790" y="520" font-family="Courier" font-size="9" fill="#00bcd4">GPIO21━━━━━━● → SDA(LCD)</text>
+<text x="790" y="540" font-family="Courier" font-size="9" fill="#00bcd4">GPIO22━━━━━━● → SCL(LCD)</text>
+<text x="790" y="560" font-family="Courier" font-size="9" fill="#fff">GPIO23━━━━━━●</text>
+<text x="790" y="580" font-family="Courier" font-size="9" fill="#fff">GPIO19━━━━━━●</text>
+<text x="790" y="600" font-family="Courier" font-size="9" fill="#fff">GPIO18━━━━━━●</text>
+<!-- USB -->
+<rect x="720" y="720" width="60" height="20" rx="3" fill="#ccc" stroke="#999"/>
+<text x="750" y="734" text-anchor="middle" font-family="Arial" font-size="7" fill="#333">USB</text>
+<text x="750" y="705" text-anchor="middle" font-family="Arial" font-size="8" fill="#bbdefb">5V USB Power Input</text>
+</g>
+
+<!-- ======= AVANI LC MODULE (TOP) ======= -->
+<g filter="url(#sh)">
+<rect x="500" y="70" width="500" height="150" rx="12" fill="#b71c1c" stroke="#7f0000" stroke-width="2"/>
+<text x="750" y="100" text-anchor="middle" font-family="Arial" font-size="15" font-weight="bold" fill="#fff">RAVEL AVANI LC - Industrial Loop Controller</text>
+<text x="750" y="118" text-anchor="middle" font-family="Arial" font-size="9" fill="#ffcdd2">Addressable Fire Alarm | Powered by 24V DC | Proprietary Protocol</text>
+<!-- Input terminals -->
+<text x="530" y="145" font-family="Arial" font-size="9" fill="#fff" font-weight="bold">INPUTS:</text>
+<circle cx="530" cy="165" r="6" fill="#ff9800" stroke="#fff"/><text x="545" y="169" font-family="Arial" font-size="8" fill="#fff">Loop+ (Sensors)</text>
+<circle cx="650" cy="165" r="6" fill="#ff9800" stroke="#fff"/><text x="665" y="169" font-family="Arial" font-size="8" fill="#fff">Loop- (Return)</text>
+<!-- Output terminals -->
+<text x="760" y="145" font-family="Arial" font-size="9" fill="#fff" font-weight="bold">OUTPUTS:</text>
+<circle cx="760" cy="170" r="7" fill="#f44336" stroke="#fff" stroke-width="1.5"/><text x="775" y="174" font-family="Arial" font-size="8" fill="#fff">FIRE (24V)</text>
+<circle cx="860" cy="170" r="7" fill="#ff9800" stroke="#fff" stroke-width="1.5"/><text x="875" y="174" font-family="Arial" font-size="8" fill="#fff">FAULT (24V)</text>
+<circle cx="950" cy="170" r="7" fill="#333" stroke="#fff" stroke-width="1.5"/><text x="965" y="174" font-family="Arial" font-size="8" fill="#fff">GND</text>
+<!-- Status LEDs on board -->
+<circle cx="540" cy="195" r="4" fill="#4caf50"/><circle cx="560" cy="195" r="4" fill="#f44336"/><circle cx="580" cy="195" r="4" fill="#ffeb3b"/>
+<text x="600" y="199" font-family="Arial" font-size="7" fill="#ffcdd2">Status LEDs</text>
+</g>
+
+<!-- ======= OPTOCOUPLER PC817 (Between AVANI and ESP32) ======= -->
+<g filter="url(#sh)">
+<rect x="650" y="260" width="200" height="70" rx="8" fill="#37474f" stroke="#263238" stroke-width="1.5"/>
+<text x="750" y="285" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#fff">PC817 Optocoupler</text>
+<text x="750" y="300" text-anchor="middle" font-family="Arial" font-size="8" fill="#b0bec5">Electrical Isolation | 24V→3.3V</text>
+<!-- Pins -->
+<text x="670" y="320" font-family="Arial" font-size="7" fill="#ffab00">Pin1:Anode</text>
+<text x="740" y="320" font-family="Arial" font-size="7" fill="#ffab00">Pin2:Cathode</text>
+<text x="800" y="320" font-family="Arial" font-size="7" fill="#ffab00">Pin3:Emitter</text>
+<text x="670" y="328" font-family="Arial" font-size="6" fill="#90a4ae">(From FIRE)</text>
+<text x="740" y="328" font-family="Arial" font-size="6" fill="#90a4ae">(From GND)</text>
+<text x="800" y="328" font-family="Arial" font-size="6" fill="#90a4ae">(To GPIO34)</text>
+</g>
+
+<!-- ======= MQ-2 SENSOR (LEFT) ======= -->
+<g filter="url(#sh)">
+<rect x="50" y="420" width="200" height="130" rx="12" fill="#4a148c" stroke="#311b92" stroke-width="1.5"/>
+<text x="150" y="450" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#fff">MQ-2 Smoke Sensor</text>
+<text x="150" y="468" text-anchor="middle" font-family="Arial" font-size="8" fill="#ce93d8">Gas/Smoke Detection Module</text>
+<text x="70" y="495" font-family="Courier" font-size="9" fill="#fff">VCC ● ━━→ ESP32 3.3V</text>
+<text x="70" y="512" font-family="Courier" font-size="9" fill="#2196f3">AO  ● ━━→ ESP32 GPIO35</text>
+<text x="70" y="529" font-family="Courier" font-size="9" fill="#4caf50">DO  ● ━━→ AVANI Loop+</text>
+<text x="70" y="546" font-family="Courier" font-size="9" fill="#333">GND ● ━━→ ESP32 GND</text>
+</g>
+
+<!-- ======= DHT11 SENSOR (LEFT) ======= -->
+<g filter="url(#sh)">
+<rect x="50" y="590" width="200" height="110" rx="12" fill="#01579b" stroke="#0d47a1" stroke-width="1.5"/>
+<text x="150" y="618" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#fff">DHT11 Temperature</text>
+<text x="150" y="636" text-anchor="middle" font-family="Arial" font-size="8" fill="#81d4fa">Temp + Humidity Sensor</text>
+<text x="70" y="660" font-family="Courier" font-size="9" fill="#fff">VCC  ● ━━→ ESP32 3.3V</text>
+<text x="70" y="677" font-family="Courier" font-size="9" fill="#ffc107">DATA ● ━━→ ESP32 GPIO32</text>
+<text x="70" y="694" font-family="Courier" font-size="9" fill="#333">GND  ● ━━→ ESP32 GND</text>
+</g>
+
+<!-- ======= BUZZER (RIGHT) ======= -->
+<g filter="url(#sh)">
+<rect x="1100" y="400" width="180" height="90" rx="12" fill="#bf360c" stroke="#8d2f04" stroke-width="1.5"/>
+<text x="1190" y="428" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#fff">Piezo Buzzer</text>
+<text x="1190" y="446" text-anchor="middle" font-family="Arial" font-size="8" fill="#ffccbc">Active Buzzer 5V</text>
+<text x="1120" y="470" font-family="Courier" font-size="9" fill="#ff5722">+ ● ←━━ ESP32 GPIO25</text>
+<text x="1120" y="487" font-family="Courier" font-size="9" fill="#333">- ● ←━━ ESP32 GND</text>
+</g>
+
+<!-- ======= LEDs (RIGHT) ======= -->
+<g filter="url(#sh)">
+<rect x="1100" y="520" width="180" height="130" rx="12" fill="#1b5e20" stroke="#0d3b0d" stroke-width="1.5"/>
+<text x="1190" y="545" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#fff">Status LEDs</text>
+<text x="1190" y="560" text-anchor="middle" font-family="Arial" font-size="8" fill="#a5d6a7">With 220ohm Resistors</text>
+<circle cx="1130" cy="585" r="6" fill="#f44336"/><text x="1145" y="589" font-family="Courier" font-size="8" fill="#fff">RED   ←━ GPIO26 (FIRE)</text>
+<circle cx="1130" cy="608" r="6" fill="#4caf50"/><text x="1145" y="612" font-family="Courier" font-size="8" fill="#fff">GREEN ←━ GPIO27 (OK)</text>
+<circle cx="1130" cy="631" r="6" fill="#ffeb3b"/><text x="1145" y="635" font-family="Courier" font-size="8" fill="#fff">YELLOW←━ GPIO14 (FAULT)</text>
+</g>
+
+<!-- ======= LCD DISPLAY (RIGHT BOTTOM) ======= -->
+<g filter="url(#sh)">
+<rect x="1100" y="680" width="180" height="110" rx="12" fill="#004d40" stroke="#00251a" stroke-width="1.5"/>
+<text x="1190" y="705" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#fff">16x2 LCD (I2C)</text>
+<text x="1190" y="720" text-anchor="middle" font-family="Arial" font-size="8" fill="#80cbc4">PCF8574 I2C Backpack</text>
+<text x="1120" y="745" font-family="Courier" font-size="8" fill="#fff">VCC ● ←━━ ESP32 3.3V</text>
+<text x="1120" y="762" font-family="Courier" font-size="8" fill="#00bcd4">SDA ● ←━━ ESP32 GPIO21</text>
+<text x="1120" y="779" font-family="Courier" font-size="8" fill="#00bcd4">SCL ● ←━━ ESP32 GPIO22</text>
+<text x="1120" y="796" font-family="Courier" font-size="8" fill="#333">GND ● ←━━ ESP32 GND</text>
+</g>
+
+<!-- ======= FIREBASE CLOUD (TOP RIGHT) ======= -->
+<g filter="url(#sh)">
+<rect x="1150" y="80" width="200" height="100" rx="30" fill="#ff8f00" stroke="#e65100" stroke-width="2"/>
+<text x="1250" y="115" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#fff">Firebase Cloud</text>
+<text x="1250" y="135" text-anchor="middle" font-family="Arial" font-size="9" fill="#fff3e0">Realtime Database</text>
+<text x="1250" y="155" text-anchor="middle" font-family="Arial" font-size="8" fill="#fff">HTTP/HTTPS via WiFi</text>
+<text x="1250" y="170" text-anchor="middle" font-family="Arial" font-size="8" fill="#fff">→ Dashboard + Alerts</text>
+</g>
+
+<!-- ======= 24V PSU (TOP LEFT) ======= -->
+<g filter="url(#sh)">
+<rect x="50" y="80" width="180" height="90" rx="8" fill="#424242" stroke="#212121" stroke-width="1.5"/>
+<text x="140" y="108" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#fff">24V DC Power Supply</text>
+<text x="140" y="126" text-anchor="middle" font-family="Arial" font-size="8" fill="#bbb">AC Mains → 24V DC</text>
+<text x="70" y="148" font-family="Courier" font-size="9" fill="#f44336">+24V ●━━→ AVANI LC VIN</text>
+<text x="70" y="165" font-family="Courier" font-size="9" fill="#333">GND  ●━━→ AVANI LC GND</text>
+</g>
+
+<!-- ======= 5V USB (BOTTOM) ======= -->
+<g filter="url(#sh)">
+<rect x="600" y="830" width="300" height="60" rx="8" fill="#555" stroke="#333" stroke-width="1.5"/>
+<text x="750" y="855" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#fff">5V USB Power Adapter</text>
+<text x="750" y="875" text-anchor="middle" font-family="Arial" font-size="8" fill="#bbb">USB-B Micro → ESP32 VIN (5V) + GND</text>
+</g>
+
+<!-- ======= WIRE CONNECTIONS ======= -->
+<!-- 24V PSU to AVANI LC -->
+<path d="M230,120 L495,120" fill="none" stroke="#f44336" stroke-width="3" marker-end="url(#aR)"/>
+<path d="M230,140 L495,165" fill="none" stroke="#333" stroke-width="2.5" stroke-dasharray="6,3"/>
+<text x="350" y="112" font-family="Arial" font-size="8" fill="#f44336" font-weight="bold">+24V (Red Wire)</text>
+<text x="350" y="158" font-family="Arial" font-size="8" fill="#333">GND (Black Wire)</text>
+
+<!-- AVANI FIRE output to Optocoupler Pin1 -->
+<path d="M760,220 L710,258" fill="none" stroke="#ff5722" stroke-width="2.5" marker-end="url(#aR)"/>
+<text x="700" y="242" font-family="Arial" font-size="7" fill="#ff5722">FIRE 24V</text>
+
+<!-- AVANI GND to Optocoupler Pin2 -->
+<path d="M950,177 C 950,240 790,250 770,258" fill="none" stroke="#333" stroke-width="2" stroke-dasharray="5,3"/>
+<text x="870" y="235" font-family="Arial" font-size="7" fill="#333">GND</text>
+
+<!-- Optocoupler Emitter to ESP32 GPIO34 -->
+<path d="M750,330 L750,348" fill="none" stroke="#4caf50" stroke-width="3" marker-end="url(#aG)"/>
+<text x="760" y="342" font-family="Arial" font-size="7" fill="#4caf50">3.3V Signal → GPIO34</text>
+
+<!-- MQ-2 AO to ESP32 GPIO35 -->
+<path d="M250,512 L548,558" fill="none" stroke="#2196f3" stroke-width="2.5" marker-end="url(#aG)"/>
+<text x="370" y="528" font-family="Arial" font-size="8" fill="#2196f3" font-weight="bold">Analog Signal (Blue Wire)</text>
+
+<!-- MQ-2 DO to AVANI Loop -->
+<path d="M250,529 C 350,529 400,300 530,165" fill="none" stroke="#9c27b0" stroke-width="2" marker-end="url(#aR)"/>
+<text x="310" y="390" font-family="Arial" font-size="7" fill="#9c27b0">Sensor Loop (Purple)</text>
+
+<!-- DHT11 DATA to ESP32 GPIO32 -->
+<path d="M250,677 C 400,677 500,620 548,578" fill="none" stroke="#ffc107" stroke-width="2.5" marker-end="url(#aG)"/>
+<text x="350" y="660" font-family="Arial" font-size="8" fill="#f57f17" font-weight="bold">Digital Data (Yellow Wire)</text>
+
+<!-- ESP32 to Buzzer -->
+<path d="M950,598 L1097,450" fill="none" stroke="#ff5722" stroke-width="2.5" marker-end="url(#aR)"/>
+<text x="1010" y="510" font-family="Arial" font-size="8" fill="#ff5722" font-weight="bold">GPIO25 (Orange)</text>
+
+<!-- ESP32 to LEDs -->
+<path d="M950,618 L1097,585" fill="none" stroke="#f44336" stroke-width="2"/>
+<path d="M950,638 L1097,608" fill="none" stroke="#4caf50" stroke-width="2"/>
+<path d="M950,658" fill="none" stroke="#ffc107" stroke-width="2"/>
+<path d="M950,658 L1097,631" fill="none" stroke="#ffc107" stroke-width="2"/>
+
+<!-- ESP32 I2C to LCD -->
+<path d="M950,520 C 1050,550 1080,680 1097,740" fill="none" stroke="#00bcd4" stroke-width="2.5"/>
+<text x="1020" y="640" font-family="Arial" font-size="8" fill="#00838f" font-weight="bold">I2C (Cyan)</text>
+
+<!-- ESP32 WiFi to Firebase -->
+<path d="M900,350 C 1000,250 1100,180 1147,135" fill="none" stroke="#ff8f00" stroke-width="2.5" stroke-dasharray="10,5" marker-end="url(#aR)"/>
+<text x="1020" y="230" font-family="Arial" font-size="9" fill="#e65100" font-weight="bold">WiFi 2.4GHz</text>
+<text x="1020" y="245" font-family="Arial" font-size="7" fill="#e65100">(HTTP to Firebase API)</text>
+
+<!-- VCC lines (thin red) -->
+<path d="M250,495 L548,480" fill="none" stroke="#f44336" stroke-width="1.5" stroke-dasharray="4,2"/>
+<path d="M250,660 L548,480" fill="none" stroke="#f44336" stroke-width="1.5" stroke-dasharray="4,2"/>
+<text x="380" y="482" font-family="Arial" font-size="7" fill="#f44336">3.3V (Red Dashed)</text>
+
+<!-- GND lines -->
+<path d="M250,546 L548,500" fill="none" stroke="#333" stroke-width="1.5" stroke-dasharray="4,2"/>
+<path d="M250,694 L548,500" fill="none" stroke="#333" stroke-width="1.5" stroke-dasharray="4,2"/>
+<text x="380" y="505" font-family="Arial" font-size="7" fill="#333">GND (Black Dashed)</text>
+
+<!-- USB to ESP32 -->
+<path d="M750,830 L750,745" fill="none" stroke="#666" stroke-width="3.5"/>
+<text x="765" y="790" font-family="Arial" font-size="8" fill="#555">USB Cable</text>
+
+<!-- ======= WIRE COLOR LEGEND ======= -->
+<rect x="50" y="930" width="1400" height="150" rx="10" fill="#fff" stroke="#e0e0e0" stroke-width="1.5"/>
+<text x="750" y="955" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#333">WIRE COLOR CODE &amp; CONNECTION TABLE</text>
+
+<!-- Row 1 -->
+<line x1="80" y1="975" x2="120" y2="975" stroke="#f44336" stroke-width="3.5"/>
+<text x="130" y="979" font-family="Arial" font-size="9" fill="#333">Red = +24V / +3.3V Power</text>
+<line x1="350" y1="975" x2="390" y2="975" stroke="#333" stroke-width="3" stroke-dasharray="6,3"/>
+<text x="400" y="979" font-family="Arial" font-size="9" fill="#333">Black Dashed = GND</text>
+<line x1="600" y1="975" x2="640" y2="975" stroke="#ff5722" stroke-width="3"/>
+<text x="650" y="979" font-family="Arial" font-size="9" fill="#333">Orange = FIRE Signal / Buzzer</text>
+<line x1="900" y1="975" x2="940" y2="975" stroke="#4caf50" stroke-width="3"/>
+<text x="950" y="979" font-family="Arial" font-size="9" fill="#333">Green = Opto Output (Safe 3.3V)</text>
+<line x1="1200" y1="975" x2="1240" y2="975" stroke="#2196f3" stroke-width="3"/>
+<text x="1250" y="979" font-family="Arial" font-size="9" fill="#333">Blue = Analog Data</text>
+
+<!-- Row 2 -->
+<line x1="80" y1="1000" x2="120" y2="1000" stroke="#ffc107" stroke-width="3"/>
+<text x="130" y="1004" font-family="Arial" font-size="9" fill="#333">Yellow = Digital Data (DHT11)</text>
+<line x1="350" y1="1000" x2="390" y2="1000" stroke="#9c27b0" stroke-width="3"/>
+<text x="400" y="1004" font-family="Arial" font-size="9" fill="#333">Purple = Sensor Loop</text>
+<line x1="600" y1="1000" x2="640" y2="1000" stroke="#00bcd4" stroke-width="3"/>
+<text x="650" y="1004" font-family="Arial" font-size="9" fill="#333">Cyan = I2C Bus (SDA/SCL)</text>
+<line x1="900" y1="1000" x2="940" y2="1000" stroke="#ff8f00" stroke-width="2.5" stroke-dasharray="8,4"/>
+<text x="950" y="1004" font-family="Arial" font-size="9" fill="#333">Orange Dashed = WiFi (Wireless)</text>
+<line x1="1200" y1="1000" x2="1240" y2="1000" stroke="#666" stroke-width="3.5"/>
+<text x="1250" y="1004" font-family="Arial" font-size="9" fill="#333">Grey = USB Power Cable</text>
+
+<!-- Connection Table -->
+<text x="80" y="1035" font-family="Arial" font-size="10" font-weight="bold" fill="#0d47a1">COMPLETE PIN MAPPING:</text>
+<text x="80" y="1055" font-family="Courier" font-size="9" fill="#333">ESP32 GPIO34 ← PC817 Emitter (Fire detect)  |  ESP32 GPIO35 ← MQ-2 AO (Smoke analog)  |  ESP32 GPIO32 ← DHT11 DATA (Temperature)</text>
+<text x="80" y="1073" font-family="Courier" font-size="9" fill="#333">ESP32 GPIO25 → Buzzer (+)  |  ESP32 GPIO26 → Red LED (FIRE)  |  ESP32 GPIO27 → Green LED (OK)  |  ESP32 GPIO14 → Yellow LED (FAULT)</text>
+<text x="80" y="1091" font-family="Courier" font-size="9" fill="#333">ESP32 GPIO21 → LCD SDA  |  ESP32 GPIO22 → LCD SCL  |  ESP32 3.3V → Sensors VCC  |  ESP32 GND → Common Ground  |  24V PSU → AVANI LC</text>
+
+</svg>
