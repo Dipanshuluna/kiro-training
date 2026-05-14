@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1000" width="1400" height="1000">
+  <defs>
+    <!-- Gradient for 3D effect on components -->
+    <linearGradient id="boardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2d5016;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#1a3009;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="espGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1565c0;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#0d47a1;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="avaniGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#b71c1c;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#7f0000;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="sensorGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4a148c;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#311b92;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="optoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#263238;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#37474f;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="lcdGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#004d40;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#00251a;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="psuGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#424242;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#212121;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="cloudGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff8f00;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#ff6f00;stop-opacity:1"/>
+    </linearGradient>
+    <!-- Shadow filter -->
+    <filter id="shadow" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="4" dy="6" stdDeviation="3" flood-opacity="0.4"/>
+    </filter>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1400" height="1000" fill="#f5f5f0"/>
+  <!-- Grid pattern for depth -->
+  <g opacity="0.08">
+    <line x1="0" y1="0" x2="1400" y2="700" stroke="#333" stroke-width="0.5"/>
+    <line x1="200" y1="0" x2="1400" y2="600" stroke="#333" stroke-width="0.5"/>
+    <line x1="400" y1="0" x2="1400" y2="500" stroke="#333" stroke-width="0.5"/>
+    <line x1="600" y1="0" x2="1400" y2="400" stroke="#333" stroke-width="0.5"/>
+    <line x1="0" y1="200" x2="1200" y2="800" stroke="#333" stroke-width="0.5"/>
+    <line x1="0" y1="400" x2="1000" y2="900" stroke="#333" stroke-width="0.5"/>
+  </g>
+
+  <!-- Title -->
+  <text x="700" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#1a1a1a">
+    Hybrid Industrial Fire Alarm IoT System - 3D Wiring Diagram
+  </text>
+  <text x="700" y="65" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#555">
+    Complete Hardware Connections &amp; Cable Routing
+  </text>
+
+  <!-- ================ 24V POWER SUPPLY (Top Left) ================ -->
+  <g transform="translate(80, 100)" filter="url(#shadow)">
+    <!-- 3D Box - Top face -->
+    <polygon points="0,30 80,0 180,30 100,60" fill="#555" stroke="#333" stroke-width="1"/>
+    <!-- 3D Box - Front face -->
+    <polygon points="0,30 0,80 100,110 100,60" fill="url(#psuGrad)" stroke="#333" stroke-width="1"/>
+    <!-- 3D Box - Right face -->
+    <polygon points="100,60 100,110 180,80 180,30" fill="#333" stroke="#222" stroke-width="1"/>
+    <!-- Label -->
+    <text x="50" y="78" font-family="Arial" font-size="10" fill="#fff" font-weight="bold">24V PSU</text>
+    <text x="50" y="92" font-family="Arial" font-size="8" fill="#ccc">Power Supply</text>
+    <!-- Terminals -->
+    <circle cx="30" cy="105" r="4" fill="#ff0" stroke="#333" stroke-width="1"/>
+    <circle cx="70" cy="105" r="4" fill="#000" stroke="#333" stroke-width="1"/>
+    <text x="24" y="120" font-family="Arial" font-size="7" fill="#333">+24V</text>
+    <text x="64" y="120" font-family="Arial" font-size="7" fill="#333">GND</text>
+  </g>
+
+  <!-- ================ 5V USB POWER (Bottom Left) ================ -->
+  <g transform="translate(80, 750)" filter="url(#shadow)">
+    <!-- 3D Box -->
+    <polygon points="0,30 70,0 150,30 80,60" fill="#666" stroke="#444" stroke-width="1"/>
+    <polygon points="0,30 0,70 80,100 80,60" fill="#555" stroke="#444" stroke-width="1"/>
+    <polygon points="80,60 80,100 150,70 150,30" fill="#444" stroke="#333" stroke-width="1"/>
+    <!-- USB port -->
+    <rect x="25" y="72" width="20" height="8" rx="1" fill="#ccc" stroke="#999"/>
+    <text x="40" y="68" font-family="Arial" font-size="10" fill="#fff" font-weight="bold">5V USB</text>
+    <text x="40" y="92" font-family="Arial" font-size="8" fill="#ccc">ESP32 Power</text>
+  </g>
+
+  <!-- ================ RAVEL AVANI LC MODULE (Top Center) ================ -->
+  <g transform="translate(350, 90)" filter="url(#shadow)">
+    <!-- 3D Board - Top face -->
+    <polygon points="0,50 120,0 320,50 200,100" fill="#c62828" stroke="#7f0000" stroke-width="1.5"/>
+    <!-- 3D Board - Front face -->
+    <polygon points="0,50 0,130 200,180 200,100" fill="url(#avaniGrad)" stroke="#7f0000" stroke-width="1.5"/>
+    <!-- 3D Board - Right face -->
+    <polygon points="200,100 200,180 320,130 320,50" fill="#7f0000" stroke="#5f0000" stroke-width="1.5"/>
+    <!-- Components on board -->
+    <rect x="30" y="70" width="60" height="25" rx="3" fill="#222" opacity="0.7"/>
+    <rect x="110" y="80" width="40" height="15" rx="2" fill="#444" opacity="0.7"/>
+    <!-- Status LEDs -->
+    <circle cx="60" cy="115" r="5" fill="#0f0" filter="url(#glow)"/>
+    <circle cx="80" cy="115" r="5" fill="#f00" filter="url(#glow)"/>
+    <circle cx="100" cy="115" r="5" fill="#ff0" filter="url(#glow)"/>
+    <!-- Output terminals -->
+    <circle cx="40" cy="155" r="5" fill="#f44336" stroke="#fff" stroke-width="1"/>
+    <circle cx="65" cy="160" r="5" fill="#ff9800" stroke="#fff" stroke-width="1"/>
+    <circle cx="90" cy="165" r="5" fill="#2196f3" stroke="#fff" stroke-width="1"/>
+    <circle cx="115" cy="168" r="5" fill="#000" stroke="#fff" stroke-width="1"/>
+    <!-- Labels -->
+    <text x="100" y="50" text-anchor="middle" font-family="Arial" font-size="13" fill="#fff" font-weight="bold">RAVEL AVANI LC</text>
+    <text x="100" y="65" text-anchor="middle" font-family="Arial" font-size="9" fill="#ffcdd2">Industrial Loop Controller</text>
+    <text x="25" y="172" font-family="Arial" font-size="7" fill="#fff">FIRE</text>
+    <text x="52" y="177" font-family="Arial" font-size="7" fill="#fff">FAULT</text>
+    <text x="78" y="182" font-family="Arial" font-size="7" fill="#fff">AUX</text>
+    <text x="105" y="185" font-family="Arial" font-size="7" fill="#fff">GND</text>
+  </g>
+
+  <!-- ================ SMOKE SENSOR MQ-2 (Top Right) ================ -->
+  <g transform="translate(780, 80)" filter="url(#shadow)">
+    <!-- Sensor body - cylinder 3D -->
+    <ellipse cx="50" cy="30" rx="40" ry="15" fill="#7b1fa2" stroke="#4a148c"/>
+    <rect x="10" y="30" width="80" height="50" fill="url(#sensorGrad)" stroke="#4a148c"/>
+    <ellipse cx="50" cy="80" rx="40" ry="15" fill="#6a1b9a" stroke="#4a148c"/>
+    <!-- Metal mesh top -->
+    <ellipse cx="50" cy="30" rx="30" ry="10" fill="#bbb" stroke="#888"/>
+    <line x1="30" y1="28" x2="70" y2="28" stroke="#999" stroke-width="0.5"/>
+    <line x1="35" y1="32" x2="65" y2="32" stroke="#999" stroke-width="0.5"/>
+    <!-- Pins -->
+    <line x1="25" y1="95" x2="25" y2="110" stroke="#ccc" stroke-width="2"/>
+    <line x1="45" y1="95" x2="45" y2="110" stroke="#ccc" stroke-width="2"/>
+    <line x1="55" y1="95" x2="55" y2="110" stroke="#ccc" stroke-width="2"/>
+    <line x1="75" y1="95" x2="75" y2="110" stroke="#ccc" stroke-width="2"/>
+    <!-- Labels -->
+    <text x="50" y="65" text-anchor="middle" font-family="Arial" font-size="10" fill="#fff" font-weight="bold">MQ-2</text>
+    <text x="50" y="130" text-anchor="middle" font-family="Arial" font-size="9" fill="#333">Smoke Sensor</text>
+    <text x="25" y="122" text-anchor="middle" font-family="Arial" font-size="6" fill="#555">VCC</text>
+    <text x="45" y="122" text-anchor="middle" font-family="Arial" font-size="6" fill="#555">DO</text>
+    <text x="55" y="122" text-anchor="middle" font-family="Arial" font-size="6" fill="#555">AO</text>
+    <text x="75" y="122" text-anchor="middle" font-family="Arial" font-size="6" fill="#555">GND</text>
+  </g>
+
+  <!-- ================ TEMPERATURE SENSOR DHT11 (Far Right) ================ -->
+  <g transform="translate(1050, 120)" filter="url(#shadow)">
+    <!-- Sensor body -->
+    <polygon points="0,20 60,0 110,20 50,40" fill="#29b6f6" stroke="#0288d1"/>
+    <polygon points="0,20 0,60 50,80 50,40" fill="#0288d1" stroke="#01579b"/>
+    <polygon points="50,40 50,80 110,60 110,20" fill="#0277bd" stroke="#01579b"/>
+    <!-- Grille -->
+    <line x1="10" y1="35" x2="40" y2="50" stroke="#fff" stroke-width="0.5" opacity="0.5"/>
+    <line x1="10" y1="42" x2="40" y2="57" stroke="#fff" stroke-width="0.5" opacity="0.5"/>
+    <line x1="10" y1="49" x2="40" y2="64" stroke="#fff" stroke-width="0.5" opacity="0.5"/>
+    <!-- Pins -->
+    <line x1="15" y1="75" x2="15" y2="95" stroke="#ccc" stroke-width="2"/>
+    <line x1="30" y1="78" x2="30" y2="98" stroke="#ccc" stroke-width="2"/>
+    <line x1="45" y1="78" x2="45" y2="98" stroke="#ccc" stroke-width="2"/>
+    <!-- Labels -->
+    <text x="55" y="15" text-anchor="middle" font-family="Arial" font-size="10" fill="#01579b" font-weight="bold">DHT11</text>
+    <text x="30" y="115" text-anchor="middle" font-family="Arial" font-size="9" fill="#333">Temp Sensor</text>
+    <text x="15" y="105" text-anchor="middle" font-family="Arial" font-size="6" fill="#555">VCC</text>
+    <text x="30" y="108" text-anchor="middle" font-family="Arial" font-size="6" fill="#555">DATA</text>
+    <text x="45" y="108" text-anchor="middle" font-family="Arial" font-size="6" fill="#555">GND</text>
+  </g>
+
+  <!-- ================ OPTOCOUPLER PC817 (Center) ================ -->
+  <g transform="translate(450, 340)" filter="url(#shadow)">
+    <!-- IC Package 3D -->
+    <polygon points="0,20 40,0 130,20 90,40" fill="#555" stroke="#333"/>
+    <polygon points="0,20 0,60 90,80 90,40" fill="url(#optoGrad)" stroke="#333"/>
+    <polygon points="90,40 90,80 130,60 130,20" fill="#1a1a1a" stroke="#333"/>
+    <!-- Notch -->
+    <circle cx="15" cy="40" r="4" fill="#444" stroke="#555"/>
+    <!-- Pins left -->
+    <line x1="15" y1="80" x2="15" y2="100" stroke="#ccc" stroke-width="2"/>
+    <line x1="35" y1="80" x2="35" y2="100" stroke="#ccc" stroke-width="2"/>
+    <!-- Pins right -->
+    <line x1="55" y1="80" x2="55" y2="100" stroke="#ccc" stroke-width="2"/>
+    <line x1="75" y1="80" x2="75" y2="100" stroke="#ccc" stroke-width="2"/>
+    <!-- Labels -->
+    <text x="45" y="55" font-family="Arial" font-size="9" fill="#fff" font-weight="bold">PC817</text>
+    <text x="45" y="120" text-anchor="middle" font-family="Arial" font-size="9" fill="#333">Optocoupler</text>
+    <text x="45" y="133" text-anchor="middle" font-family="Arial" font-size="7" fill="#888">(Electrical Isolation)</text>
+    <!-- Pin labels -->
+    <text x="15" y="110" text-anchor="middle" font-family="Arial" font-size="6" fill="#555">Anode</text>
+    <text x="35" y="110" text-anchor="middle" font-family="Arial" font-size="6" fill="#555">Cathode</text>
+    <text x="55" y="110" text-anchor="middle" font-family="Arial" font-size="6" fill="#555">Emitter</text>
+    <text x="75" y="110" text-anchor="middle" font-family="Arial" font-size="6" fill="#555">Collector</text>
+  </g>
+
+  <!-- ================ ESP32 BOARD (Center-Bottom) ================ -->
+  <g transform="translate(400, 520)" filter="url(#shadow)">
+    <!-- PCB 3D - Top -->
+    <polygon points="0,40 100,0 300,40 200,80" fill="#1976d2" stroke="#0d47a1" stroke-width="1.5"/>
+    <!-- PCB 3D - Front -->
+    <polygon points="0,40 0,120 200,160 200,80" fill="url(#espGrad)" stroke="#0d47a1" stroke-width="1.5"/>
+    <!-- PCB 3D - Right -->
+    <polygon points="200,80 200,160 300,120 300,40" fill="#0d47a1" stroke="#093170" stroke-width="1.5"/>
+    <!-- WiFi antenna area -->
+    <polygon points="150,20 175,10 230,25 205,35" fill="#ffd54f" opacity="0.3"/>
+    <!-- Chip -->
+    <rect x="60" y="70" width="50" height="35" rx="3" fill="#111" stroke="#555"/>
+    <text x="85" y="92" text-anchor="middle" font-family="Arial" font-size="7" fill="#aaa">ESP32</text>
+    <!-- USB port -->
+    <rect x="5" y="85" width="20" height="12" rx="2" fill="#ccc" stroke="#999"/>
+    <!-- Pin headers left -->
+    <g>
+      <rect x="15" y="115" width="4" height="4" fill="#ffd700"/>
+      <rect x="25" y="118" width="4" height="4" fill="#ffd700"/>
+      <rect x="35" y="121" width="4" height="4" fill="#ffd700"/>
+      <rect x="45" y="124" width="4" height="4" fill="#ffd700"/>
+      <rect x="55" y="127" width="4" height="4" fill="#ffd700"/>
+      <rect x="65" y="130" width="4" height="4" fill="#ffd700"/>
+      <rect x="75" y="133" width="4" height="4" fill="#ffd700"/>
+      <rect x="85" y="136" width="4" height="4" fill="#ffd700"/>
+    </g>
+    <!-- Pin headers right -->
+    <g>
+      <rect x="120" y="105" width="4" height="4" fill="#ffd700"/>
+      <rect x="130" y="108" width="4" height="4" fill="#ffd700"/>
+      <rect x="140" y="111" width="4" height="4" fill="#ffd700"/>
+      <rect x="150" y="114" width="4" height="4" fill="#ffd700"/>
+      <rect x="160" y="117" width="4" height="4" fill="#ffd700"/>
+      <rect x="170" y="120" width="4" height="4" fill="#ffd700"/>
+      <rect x="180" y="123" width="4" height="4" fill="#ffd700"/>
+    </g>
+    <!-- WiFi signal indicator -->
+    <g transform="translate(170, 30)" opacity="0.7">
+      <path d="M0,12 Q7,-5 14,12" fill="none" stroke="#4fc3f7" stroke-width="1.5"/>
+      <path d="M-3,15 Q7,-10 17,15" fill="none" stroke="#4fc3f7" stroke-width="1"/>
+      <path d="M-6,18 Q7,-15 20,18" fill="none" stroke="#4fc3f7" stroke-width="0.7"/>
+    </g>
+    <!-- Labels -->
+    <text x="100" y="30" text-anchor="middle" font-family="Arial" font-size="13" fill="#fff" font-weight="bold">ESP32 DevKit</text>
+    <text x="100" y="45" text-anchor="middle" font-family="Arial" font-size="8" fill="#bbdefb">WiFi + BLE Microcontroller</text>
+    <!-- GPIO Labels -->
+    <text x="5" y="130" font-family="Arial" font-size="6" fill="#ffeb3b">GPIO34</text>
+    <text x="5" y="140" font-family="Arial" font-size="6" fill="#ffeb3b">GPIO35</text>
+    <text x="5" y="150" font-family="Arial" font-size="6" fill="#ffeb3b">GPIO32</text>
+    <text x="5" y="160" font-family="Arial" font-size="6" fill="#ffeb3b">GPIO25</text>
+    <text x="135" y="120" font-family="Arial" font-size="6" fill="#ffeb3b">GPIO26</text>
+    <text x="135" y="130" font-family="Arial" font-size="6" fill="#ffeb3b">GPIO27</text>
+    <text x="135" y="140" font-family="Arial" font-size="6" fill="#ffeb3b">GPIO14</text>
+  </g>
+
+  <!-- ================ BUZZER (Bottom Center-Right) ================ -->
+  <g transform="translate(780, 580)" filter="url(#shadow)">
+    <!-- Buzzer cylinder -->
+    <ellipse cx="40" cy="20" rx="35" ry="12" fill="#333" stroke="#222"/>
+    <rect x="5" y="20" width="70" height="40" fill="#222" stroke="#111"/>
+    <ellipse cx="40" cy="60" rx="35" ry="12" fill="#1a1a1a" stroke="#111"/>
+    <!-- Sound hole -->
+    <circle cx="40" cy="20" r="10" fill="#444" stroke="#555"/>
+    <circle cx="40" cy="20" r="5" fill="#555"/>
+    <!-- Sound waves -->
+    <path d="M80,20 Q90,10 80,0" fill="none" stroke="#ff9800" stroke-width="1.5" opacity="0.7"/>
+    <path d="M85,25 Q98,10 85,-5" fill="none" stroke="#ff9800" stroke-width="1" opacity="0.5"/>
+    <!-- Pins -->
+    <line x1="30" y1="72" x2="30" y2="90" stroke="#ccc" stroke-width="2"/>
+    <line x1="50" y1="72" x2="50" y2="90" stroke="#ccc" stroke-width="2"/>
+    <!-- Labels -->
+    <text x="40" y="105" text-anchor="middle" font-family="Arial" font-size="10" fill="#333" font-weight="bold">Buzzer</text>
+    <text x="30" y="98" text-anchor="middle" font-family="Arial" font-size="6" fill="#555">+</text>
+    <text x="50" y="98" text-anchor="middle" font-family="Arial" font-size="6" fill="#555">-</text>
+  </g>
+
+  <!-- ================ LEDs (Bottom Right) ================ -->
+  <g transform="translate(950, 550)" filter="url(#shadow)">
+    <!-- Red LED -->
+    <ellipse cx="20" cy="15" rx="10" ry="5" fill="#ff1744" filter="url(#glow)"/>
+    <polygon points="10,15 10,40 30,40 30,15" fill="#d50000" stroke="#b71c1c"/>
+    <line x1="15" y1="40" x2="15" y2="55" stroke="#ccc" stroke-width="1.5"/>
+    <line x1="25" y1="40" x2="25" y2="60" stroke="#ccc" stroke-width="1.5"/>
+    <!-- Green LED -->
+    <ellipse cx="60" cy="15" rx="10" ry="5" fill="#00e676" filter="url(#glow)"/>
+    <polygon points="50,15 50,40 70,40 70,15" fill="#00c853" stroke="#1b5e20"/>
+    <line x1="55" y1="40" x2="55" y2="55" stroke="#ccc" stroke-width="1.5"/>
+    <line x1="65" y1="40" x2="65" y2="60" stroke="#ccc" stroke-width="1.5"/>
+    <!-- Yellow LED -->
+    <ellipse cx="100" cy="15" rx="10" ry="5" fill="#ffea00" filter="url(#glow)"/>
+    <polygon points="90,15 90,40 110,40 110,15" fill="#ffd600" stroke="#f9a825"/>
+    <line x1="95" y1="40" x2="95" y2="55" stroke="#ccc" stroke-width="1.5"/>
+    <line x1="105" y1="40" x2="105" y2="60" stroke="#ccc" stroke-width="1.5"/>
+    <!-- Labels -->
+    <text x="20" y="72" text-anchor="middle" font-family="Arial" font-size="7" fill="#d50000">FIRE</text>
+    <text x="60" y="72" text-anchor="middle" font-family="Arial" font-size="7" fill="#1b5e20">OK</text>
+    <text x="100" y="72" text-anchor="middle" font-family="Arial" font-size="7" fill="#f57f17">FAULT</text>
+    <text x="60" y="88" text-anchor="middle" font-family="Arial" font-size="9" fill="#333" font-weight="bold">Status LEDs</text>
+  </g>
+
+  <!-- ================ LCD DISPLAY (Bottom Left) ================ -->
+  <g transform="translate(100, 530)" filter="url(#shadow)">
+    <!-- LCD body 3D -->
+    <polygon points="0,25 50,0 200,25 150,50" fill="#00695c" stroke="#004d40"/>
+    <polygon points="0,25 0,90 150,115 150,50" fill="url(#lcdGrad)" stroke="#004d40"/>
+    <polygon points="150,50 150,115 200,90 200,25" fill="#00251a" stroke="#004d40"/>
+    <!-- Screen -->
+    <rect x="15" y="45" width="110" height="40" rx="2" fill="#a5d6a7" stroke="#2e7d32"/>
+    <!-- Text on screen -->
+    <text x="70" y="63" text-anchor="middle" font-family="Courier, monospace" font-size="8" fill="#1b5e20">SYSTEM: NORMAL</text>
+    <text x="70" y="77" text-anchor="middle" font-family="Courier, monospace" font-size="8" fill="#1b5e20">TEMP: 28°C</text>
+    <!-- Pins -->
+    <rect x="20" y="108" width="3" height="8" fill="#ccc"/>
+    <rect x="30" y="110" width="3" height="8" fill="#ccc"/>
+    <rect x="40" y="112" width="3" height="8" fill="#ccc"/>
+    <rect x="50" y="113" width="3" height="8" fill="#ccc"/>
+    <!-- Labels -->
+    <text x="75" y="135" text-anchor="middle" font-family="Arial" font-size="10" fill="#333" font-weight="bold">16x2 LCD Display</text>
+    <text x="75" y="147" text-anchor="middle" font-family="Arial" font-size="7" fill="#666">I2C Interface</text>
+  </g>
+
+  <!-- ================ CLOUD / FIREBASE (Top Right Corner) ================ -->
+  <g transform="translate(1100, 350)" filter="url(#shadow)">
+    <!-- Cloud shape -->
+    <ellipse cx="80" cy="50" rx="75" ry="35" fill="#fff3e0" stroke="#ff8f00" stroke-width="2"/>
+    <ellipse cx="50" cy="55" rx="40" ry="25" fill="#fff3e0" stroke="none"/>
+    <ellipse cx="110" cy="55" rx="40" ry="25" fill="#fff3e0" stroke="none"/>
+    <ellipse cx="80" cy="40" rx="50" ry="25" fill="#fff3e0" stroke="none"/>
+    <!-- Firebase icon -->
+    <polygon points="70,35 80,25 90,35 80,70" fill="#ff8f00"/>
+    <polygon points="65,50 80,35 95,50 80,70" fill="#ffb300"/>
+    <!-- Labels -->
+    <text x="80" y="85" text-anchor="middle" font-family="Arial" font-size="11" fill="#e65100" font-weight="bold">Firebase</text>
+    <text x="80" y="98" text-anchor="middle" font-family="Arial" font-size="8" fill="#bf360c">Realtime Database</text>
+    <!-- Dashboard icon -->
+    <rect x="55" y="105" width="50" height="30" rx="3" fill="#fff" stroke="#ff8f00" stroke-width="1.5"/>
+    <rect x="60" y="112" width="15" height="8" fill="#4caf50"/>
+    <rect x="78" y="110" width="10" height="12" fill="#2196f3"/>
+    <rect x="60" y="123" width="30" height="5" fill="#eee"/>
+    <text x="80" y="148" text-anchor="middle" font-family="Arial" font-size="8" fill="#555">Web Dashboard</text>
+  </g>
+
+  <!-- ================ CABLE CONNECTIONS ================ -->
+
+  <!-- === CABLE: 24V PSU to AVANI LC (Red +24V) === -->
+  <path d="M 200,210 C 250,220 300,200 390,200" fill="none" stroke="#f44336" stroke-width="3" stroke-linecap="round">
+    <title>+24V Power to AVANI LC</title>
+  </path>
+  <!-- Cable label -->
+  <rect x="270" y="195" width="45" height="14" rx="3" fill="#f44336" opacity="0.9"/>
+  <text x="292" y="205" text-anchor="middle" font-family="Arial" font-size="7" fill="#fff">+24V Red</text>
+
+  <!-- === CABLE: 24V PSU GND to AVANI LC (Black) === -->
+  <path d="M 220,210 C 270,240 320,230 465,258" fill="none" stroke="#333" stroke-width="3" stroke-linecap="round" stroke-dasharray="8,3">
+    <title>GND to AVANI LC</title>
+  </path>
+  <rect x="300" y="230" width="50" height="14" rx="3" fill="#333" opacity="0.9"/>
+  <text x="325" y="240" text-anchor="middle" font-family="Arial" font-size="7" fill="#fff">GND Black</text>
+
+  <!-- === CABLE: AVANI LC FIRE output to Optocoupler Anode (Orange) === -->
+  <path d="M 390,245 C 400,280 420,310 465,360" fill="none" stroke="#ff9800" stroke-width="3" stroke-linecap="round">
+    <title>AVANI FIRE Signal → Optocoupler Anode</title>
+  </path>
+  <rect x="380" y="290" width="62" height="14" rx="3" fill="#ff9800" opacity="0.9"/>
+  <text x="411" y="300" text-anchor="middle" font-family="Arial" font-size="7" fill="#fff">FIRE Signal</text>
+
+  <!-- === CABLE: AVANI LC GND to Optocoupler Cathode (Black) === -->
+  <path d="M 465,258 C 470,300 475,330 485,360" fill="none" stroke="#555" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="6,3">
+    <title>AVANI GND → Optocoupler Cathode</title>
+  </path>
+
+  <!-- === CABLE: Optocoupler Emitter to ESP32 GPIO34 (Green) === -->
+  <path d="M 505,440 C 510,470 490,500 460,555" fill="none" stroke="#4caf50" stroke-width="3" stroke-linecap="round">
+    <title>Optocoupler Output → ESP32 GPIO34</title>
+  </path>
+  <rect x="455" y="480" width="70" height="14" rx="3" fill="#4caf50" opacity="0.9"/>
+  <text x="490" y="490" text-anchor="middle" font-family="Arial" font-size="7" fill="#fff">Signal (Green)</text>
+
+  <!-- === CABLE: Optocoupler Collector to ESP32 3.3V (Red thin) === -->
+  <path d="M 525,440 C 540,470 530,510 500,555" fill="none" stroke="#e53935" stroke-width="2" stroke-linecap="round">
+    <title>3.3V Pull-up → Optocoupler Collector</title>
+  </path>
+
+  <!-- === CABLE: MQ-2 Sensor to AVANI LC (Purple - sensor loop) === -->
+  <path d="M 830,190 C 750,220 650,210 570,195" fill="none" stroke="#9c27b0" stroke-width="2.5" stroke-linecap="round">
+    <title>MQ-2 Sensor Loop to AVANI LC</title>
+  </path>
+  <rect x="670" y="195" width="75" height="14" rx="3" fill="#9c27b0" opacity="0.9"/>
+  <text x="707" y="205" text-anchor="middle" font-family="Arial" font-size="7" fill="#fff">Sensor Loop (Purple)</text>
+
+  <!-- === CABLE: MQ-2 AO to ESP32 GPIO35 (Blue) === -->
+  <path d="M 835,190 C 840,300 750,420 540,570" fill="none" stroke="#2196f3" stroke-width="2.5" stroke-linecap="round">
+    <title>MQ-2 Analog Out → ESP32 GPIO35</title>
+  </path>
+  <rect x="720" y="350" width="72" height="14" rx="3" fill="#2196f3" opacity="0.9"/>
+  <text x="756" y="360" text-anchor="middle" font-family="Arial" font-size="7" fill="#fff">Analog (Blue)</text>
+
+  <!-- === CABLE: DHT11 DATA to ESP32 GPIO32 (Yellow) === -->
+  <path d="M 1080,218 C 1000,350 800,450 560,585" fill="none" stroke="#ffc107" stroke-width="2.5" stroke-linecap="round">
+    <title>DHT11 Data → ESP32 GPIO32</title>
+  </path>
+  <rect x="850" y="380" width="73" height="14" rx="3" fill="#ffc107" opacity="0.9"/>
+  <text x="886" y="390" text-anchor="middle" font-family="Arial" font-size="7" fill="#000">Data (Yellow)</text>
+
+  <!-- === CABLE: ESP32 GPIO25 to Buzzer + (Orange) === -->
+  <path d="M 620,660 C 680,670 720,650 810,610" fill="none" stroke="#ff5722" stroke-width="2.5" stroke-linecap="round">
+    <title>ESP32 GPIO25 → Buzzer</title>
+  </path>
+  <rect x="690" y="640" width="70" height="14" rx="3" fill="#ff5722" opacity="0.9"/>
+  <text x="725" y="650" text-anchor="middle" font-family="Arial" font-size="7" fill="#fff">Buzzer (Orange)</text>
+
+  <!-- === CABLE: ESP32 GPIO26 to Red LED (Red thin) === -->
+  <path d="M 630,645 C 730,630 850,600 965,605" fill="none" stroke="#f44336" stroke-width="2" stroke-linecap="round">
+    <title>ESP32 GPIO26 → Fire LED</title>
+  </path>
+
+  <!-- === CABLE: ESP32 GPIO27 to Green LED (Green thin) === -->
+  <path d="M 635,650 C 740,645 860,620 1005,610" fill="none" stroke="#4caf50" stroke-width="2" stroke-linecap="round">
+    <title>ESP32 GPIO27 → OK LED</title>
+  </path>
+
+  <!-- === CABLE: ESP32 GPIO14 to Yellow LED (Yellow thin) === -->
+  <path d="M 640,655 C 750,660 880,640 1045,610" fill="none" stroke="#ffc107" stroke-width="2" stroke-linecap="round">
+    <title>ESP32 GPIO14 → Fault LED</title>
+  </path>
+
+  <!-- === CABLE: ESP32 I2C to LCD (Cyan) === -->
+  <path d="M 420,620 C 350,630 280,640 250,650" fill="none" stroke="#00bcd4" stroke-width="2.5" stroke-linecap="round">
+    <title>ESP32 I2C → LCD Display</title>
+  </path>
+  <rect x="290" y="615" width="60" height="14" rx="3" fill="#00bcd4" opacity="0.9"/>
+  <text x="320" y="625" text-anchor="middle" font-family="Arial" font-size="7" fill="#fff">I2C (Cyan)</text>
+
+  <!-- === CABLE: 5V USB to ESP32 (Red/Black USB cable) === -->
+  <path d="M 160,810 C 250,790 350,750 420,680" fill="none" stroke="#f44336" stroke-width="3.5" stroke-linecap="round">
+    <title>5V USB Power to ESP32</title>
+  </path>
+  <path d="M 170,815 C 260,795 355,755 425,685" fill="none" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-dasharray="5,3">
+    <title>USB GND</title>
+  </path>
+  <rect x="260" y="770" width="60" height="14" rx="3" fill="#666" opacity="0.9"/>
+  <text x="290" y="780" text-anchor="middle" font-family="Arial" font-size="7" fill="#fff">USB Cable</text>
+
+  <!-- === WiFi Signal: ESP32 to Cloud (Dashed wave) === -->
+  <path d="M 650,540 C 750,480 900,430 1100,400" fill="none" stroke="#4fc3f7" stroke-width="2" stroke-linecap="round" stroke-dasharray="10,5" opacity="0.8">
+    <title>WiFi Connection to Firebase Cloud</title>
+  </path>
+  <!-- WiFi signal markers -->
+  <circle cx="750" cy="500" r="3" fill="#4fc3f7" opacity="0.6"/>
+  <circle cx="850" cy="470" r="3" fill="#4fc3f7" opacity="0.6"/>
+  <circle cx="950" cy="440" r="3" fill="#4fc3f7" opacity="0.6"/>
+  <circle cx="1050" cy="415" r="3" fill="#4fc3f7" opacity="0.6"/>
+  <rect x="840" y="445" width="72" height="14" rx="3" fill="#4fc3f7" opacity="0.8"/>
+  <text x="876" y="455" text-anchor="middle" font-family="Arial" font-size="7" fill="#01579b">WiFi (Wireless)</text>
+
+  <!-- === GND Bus (Black dashed lines) === -->
+  <path d="M 855,190 C 860,250 700,400 580,560" fill="none" stroke="#333" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="4,3" opacity="0.6">
+    <title>MQ-2 GND to ESP32 GND</title>
+  </path>
+  <path d="M 1095,218 C 1050,350 850,480 600,580" fill="none" stroke="#333" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="4,3" opacity="0.6">
+    <title>DHT11 GND to ESP32 GND</title>
+  </path>
+
+  <!-- === VCC lines (thin red dashed) === -->
+  <path d="M 805,190 C 800,280 680,400 520,555" fill="none" stroke="#f44336" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="4,3" opacity="0.5">
+    <title>MQ-2 VCC from ESP32 3.3V</title>
+  </path>
+  <path d="M 1065,218 C 1020,330 820,460 560,565" fill="none" stroke="#f44336" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="4,3" opacity="0.5">
+    <title>DHT11 VCC from ESP32 3.3V</title>
+  </path>
+
+  <!-- ================ LEGEND ================ -->
+  <g transform="translate(30, 870)">
+    <rect x="0" y="0" width="1340" height="110" rx="8" fill="#fff" stroke="#ddd" stroke-width="1.5"/>
+    <text x="670" y="22" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#333">CABLE COLOR LEGEND &amp; PIN MAPPING</text>
+
+    <!-- Row 1 -->
+    <line x1="30" y1="40" x2="70" y2="40" stroke="#f44336" stroke-width="3"/>
+    <text x="80" y="44" font-family="Arial" font-size="9" fill="#333">+24V Power (Red)</text>
+
+    <line x1="220" y1="40" x2="260" y2="40" stroke="#333" stroke-width="3" stroke-dasharray="6,3"/>
+    <text x="270" y="44" font-family="Arial" font-size="9" fill="#333">GND (Black Dashed)</text>
+
+    <line x1="430" y1="40" x2="470" y2="40" stroke="#ff9800" stroke-width="3"/>
+    <text x="480" y="44" font-family="Arial" font-size="9" fill="#333">FIRE Signal (Orange)</text>
+
+    <line x1="650" y1="40" x2="690" y2="40" stroke="#4caf50" stroke-width="3"/>
+    <text x="700" y="44" font-family="Arial" font-size="9" fill="#333">Optocoupler Out (Green)</text>
+
+    <line x1="880" y1="40" x2="920" y2="40" stroke="#9c27b0" stroke-width="2.5"/>
+    <text x="930" y="44" font-family="Arial" font-size="9" fill="#333">Sensor Loop (Purple)</text>
+
+    <line x1="1100" y1="40" x2="1140" y2="40" stroke="#00bcd4" stroke-width="2.5"/>
+    <text x="1150" y="44" font-family="Arial" font-size="9" fill="#333">I2C Bus (Cyan)</text>
+
+    <!-- Row 2 -->
+    <line x1="30" y1="65" x2="70" y2="65" stroke="#2196f3" stroke-width="2.5"/>
+    <text x="80" y="69" font-family="Arial" font-size="9" fill="#333">Analog Data (Blue)</text>
+
+    <line x1="220" y1="65" x2="260" y2="65" stroke="#ffc107" stroke-width="2.5"/>
+    <text x="270" y="69" font-family="Arial" font-size="9" fill="#333">Digital Data (Yellow)</text>
+
+    <line x1="430" y1="65" x2="470" y2="65" stroke="#ff5722" stroke-width="2.5"/>
+    <text x="480" y="69" font-family="Arial" font-size="9" fill="#333">Buzzer Drive (Orange)</text>
+
+    <line x1="650" y1="65" x2="690" y2="65" stroke="#4fc3f7" stroke-width="2" stroke-dasharray="8,4"/>
+    <text x="700" y="69" font-family="Arial" font-size="9" fill="#333">WiFi (Wireless)</text>
+
+    <line x1="880" y1="65" x2="920" y2="65" stroke="#f44336" stroke-width="1.5" stroke-dasharray="4,3"/>
+    <text x="930" y="69" font-family="Arial" font-size="9" fill="#333">VCC 3.3V (Red Dashed)</text>
+
+    <!-- Row 3 - Pin mapping -->
+    <text x="30" y="95" font-family="Arial" font-size="9" fill="#555" font-weight="bold">ESP32 GPIO Mapping:</text>
+    <text x="200" y="95" font-family="Arial" font-size="8" fill="#333">GPIO34 → Optocoupler Signal | GPIO35 → MQ-2 Analog | GPIO32 → DHT11 Data | GPIO25 → Buzzer | GPIO26 → Fire LED | GPIO27 → OK LED | GPIO14 → Fault LED | I2C(21,22) → LCD</text>
+  </g>
+
+</svg>
+
+
